@@ -1,0 +1,59 @@
+{
+	"songs": [
+		[
+			"Four",
+			"Four",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Rushed",
+			"Four",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Eliminated",
+			"Four",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Freefall",
+			"Four",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "Funkin Four BFDI",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				-5
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "cry",
+			"loop": false,
+			"name": "GfObject Crying"
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "idle",
+			"loop": false,
+			"name": "GfObject Normal"
+		},
+		{
+			"offsets": [
+				-10,
+				-4
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "HEY!",
+			"loop": false,
+			"name": "GfObject Hey"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/GFObject",
+	"position": [
+		60,
+		310
+	],
+	"healthicon": "gf",
+	"flip_x": false,
+	"healthbar_colors": [
+		165,
+		0,
+		77
+	],
+	"camera_position": [
+		0,
+		-10
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

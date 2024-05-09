@@ -1,0 +1,133 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-5,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "BFObject Normal instance"
+		},
+		{
+			"offsets": [
+				7,
+				1
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "BFObject Left instance"
+		},
+		{
+			"offsets": [
+				3,
+				-13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "BFObject Down instance"
+		},
+		{
+			"offsets": [
+				-13,
+				13
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "BFObject Up instance"
+		},
+		{
+			"offsets": [
+				-27,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "BFObject Right instance"
+		},
+		{
+			"offsets": [
+				13,
+				3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFTmiss",
+			"indices": [],
+			"name": "BFObject LeftMiss instance"
+		},
+		{
+			"offsets": [
+				17,
+				-7
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWNmiss",
+			"indices": [],
+			"name": "BFObject DownMiss instance"
+		},
+		{
+			"offsets": [
+				-7,
+				14
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUPmiss",
+			"indices": [],
+			"name": "BFObject UpMiss instance"
+		},
+		{
+			"offsets": [
+				0,
+				57
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHTmiss",
+			"indices": [],
+			"name": "BFObject RightMiss instance"
+		},
+		{
+			"offsets": [
+				-6,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "HEY!",
+			"indices": [],
+			"name": "BFObject Hey"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BFObject",
+	"position": [
+		0,
+		490
+	],
+	"healthicon": "bfobject",
+	"flip_x": true,
+	"healthbar_colors": [
+		112,
+		242,
+		255
+	],
+	"camera_position": [
+		150,
+		-20
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}

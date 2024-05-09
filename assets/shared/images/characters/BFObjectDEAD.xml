@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="BFObjectDEAD.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BFObject GameOverHit instance 10000" x="0" y="0" width="398" height="343" frameX="-5" frameY="-10" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10001" x="398" y="0" width="399" height="343" frameX="-4" frameY="-10" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10002" x="797" y="0" width="424" height="351" frameX="0" frameY="-2" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10003" x="1221" y="0" width="424" height="351" frameX="0" frameY="-2" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10004" x="1645" y="0" width="426" height="353" frameX="-1" frameY="0" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10005" x="2071" y="0" width="426" height="353" frameX="-1" frameY="0" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10006" x="2497" y="0" width="429" height="352" frameX="-1" frameY="-1" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10007" x="2926" y="0" width="429" height="352" frameX="-1" frameY="-1" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10008" x="3355" y="0" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10009" x="3355" y="0" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10010" x="3659" y="0" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10011" x="3659" y="0" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10012" x="3659" y="0" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10013" x="0" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10014" x="0" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10015" x="304" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10016" x="304" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10017" x="304" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10018" x="304" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10019" x="304" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10020" x="608" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10021" x="608" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10022" x="912" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10023" x="912" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10024" x="1216" y="353" width="304" height="246" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10025" x="1520" y="353" width="304" height="271" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10026" x="1520" y="353" width="304" height="271" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10027" x="1824" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10028" x="1824" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10029" x="2128" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10030" x="2128" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10031" x="2432" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10032" x="2432" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10033" x="2432" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10034" x="2432" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10035" x="2736" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10036" x="3040" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10037" x="3344" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10038" x="3648" y="353" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10039" x="0" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10040" x="304" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10041" x="608" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10042" x="912" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10043" x="1216" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10044" x="1520" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10045" x="1824" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10046" x="2128" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10047" x="2432" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10048" x="2736" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10049" x="3040" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10050" x="3344" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10051" x="3648" y="624" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10052" x="0" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10053" x="304" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10054" x="608" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10055" x="912" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10056" x="1216" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverHit instance 10057" x="1216" y="889" width="304" height="265" frameX="-1" frameY="-107" frameWidth="430" frameHeight="378"/>
+	<SubTexture name="BFObject GameOverLoop instance 10000" x="1520" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10001" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10002" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10003" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10004" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10005" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10006" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10007" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10008" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10009" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10010" x="2736" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10011" x="2736" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10012" x="2736" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10013" x="3040" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10014" x="3040" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10015" x="3040" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10016" x="3344" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10017" x="3344" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10018" x="3344" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10019" x="3344" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10020" x="3648" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10021" x="3648" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10022" x="3648" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10023" x="0" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10024" x="304" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10025" x="1520" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10026" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10027" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10028" x="1824" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10029" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10030" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10031" x="2128" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10032" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10033" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverLoop instance 10034" x="2432" y="889" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10000" x="608" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10001" x="608" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10002" x="608" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10003" x="912" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10004" x="912" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10005" x="1216" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10006" x="1216" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10007" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10008" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10009" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10010" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10011" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10012" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10013" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10014" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10015" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10016" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10017" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10018" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10019" x="1520" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10020" x="1824" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10021" x="1824" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10022" x="1824" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10023" x="1824" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10024" x="2128" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10025" x="2128" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10026" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10027" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10028" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10029" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10030" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10031" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10032" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10033" x="2432" y="1155" width="304" height="266"/>
+	<SubTexture name="BFObject GameOverRetry instance 10034" x="2432" y="1155" width="304" height="266"/>
+</TextureAtlas>

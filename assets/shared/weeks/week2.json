@@ -1,0 +1,50 @@
+{
+	"songs": [
+		[
+			"Projection",
+			"Two",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Cheese Cake",
+			"Two",
+			[
+				146,
+				113,
+				253
+			]
+		],
+		[
+			"Quality",
+			"Two",
+			[
+				146,
+				113,
+				253
+			]
+		]
+	],
+	"hiddenUntilUnlocked": false,
+	"hideFreeplay": false,
+	"weekBackground": "stage",
+	"difficulties": "Hard",
+	"weekCharacters": [
+		"dad",
+		"bf",
+		"gf"
+	],
+	"storyName": "The Power of Funk",
+	"weekName": "Custom Week",
+	"freeplayColor": [
+		146,
+		113,
+		253
+	],
+	"hideStoryMode": false,
+	"weekBefore": "tutorial",
+	"startUnlocked": true
+}

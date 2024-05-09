@@ -1,0 +1,89 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				8,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "MLeafy Normal"
+		},
+		{
+			"offsets": [
+				35,
+				-3
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "MLeafy Left"
+		},
+		{
+			"offsets": [
+				9,
+				-31
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "MLeafy Down"
+		},
+		{
+			"offsets": [
+				16,
+				-2
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "MLeafy Up"
+		},
+		{
+			"offsets": [
+				7,
+				-5
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "MLeafy Right"
+		},
+		{
+			"offsets": [
+				25,
+				25
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "specialanim",
+			"indices": [],
+			"name": "MLeafy ThrowKnife"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/Metal_Leafy_Assets",
+	"position": [
+		-20,
+		-50
+	],
+	"healthicon": "leafy",
+	"flip_x": false,
+	"healthbar_colors": [
+		108,
+		108,
+		108
+	],
+	"camera_position": [
+		150,
+		160
+	],
+	"sing_duration": 6.1,
+	"scale": 0.899999999999998
+}
