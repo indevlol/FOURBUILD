@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="goBFB.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GO0000" x="0" y="0" width="1502" height="1156"/>
+	<SubTexture name="GO0001" x="1502" y="0" width="1342" height="1156" frameX="-75" frameY="0" frameWidth="1502" frameHeight="1156"/>
+	<SubTexture name="GO0002" x="2844" y="0" width="1182" height="1156" frameX="-155" frameY="0" frameWidth="1502" frameHeight="1156"/>
+</TextureAtlas>
