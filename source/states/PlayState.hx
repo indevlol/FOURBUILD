@@ -129,6 +129,11 @@ class PlayState extends MusicBeatState
 
 	public var playbackRate(default, set):Float = 1;
 
+
+	public var healthTxt:FlxText;
+
+
+
 	public var boyfriendGroup:FlxSpriteGroup;
 	public var dadGroup:FlxSpriteGroup;
 	public var gfGroup:FlxSpriteGroup;
@@ -529,8 +534,10 @@ class PlayState extends MusicBeatState
 		FlxG.worldBounds.set(0, 0, FlxG.width, FlxG.height);
 		moveCameraSection();
 
-		healthBar = new Bar(0, FlxG.height * (!ClientPrefs.data.downScroll ? 0.89 : 0.11), 'healthBar', function() return health, 0, 2);
-		healthBar.screenCenter(X);
+		healthBar = new Bar(800, 350, 'healthBar', function() return health, 0, 2);
+		healthBar.scale.x = 0.6;
+		healthBar.scale.y = 0.6;
+		healthBar.angle = 90;
 		healthBar.leftToRight = false;
 		healthBar.scrollFactor.set();
 		healthBar.visible = !ClientPrefs.data.hideHud;
@@ -538,19 +545,24 @@ class PlayState extends MusicBeatState
 		reloadHealthBarColors();
 		uiGroup.add(healthBar);
 
+		healthTxt = new FlxText(500, 300, FlxG.width, "H\nE\nA\nL\nT\nH", 50);
+		healthTxt.setFormat(Paths.font("vcr.ttf"), 50, FlxColor.GREEN, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.GREEN);
+		healthTxt.scrollFactor.set();
+		healthTxt.borderSize = 1.25;
+		healthTxt.visible = !ClientPrefs.data.hideHud;
+		uiGroup.add(healthTxt);
+
 		iconP1 = new HealthIcon(boyfriend.healthIcon, true);
 		iconP1.y = healthBar.y - 75;
 		iconP1.visible = !ClientPrefs.data.hideHud;
 		iconP1.alpha = ClientPrefs.data.healthBarAlpha;
-		uiGroup.add(iconP1);
 
 		iconP2 = new HealthIcon(dad.healthIcon, false);
 		iconP2.y = healthBar.y - 75;
 		iconP2.visible = !ClientPrefs.data.hideHud;
 		iconP2.alpha = ClientPrefs.data.healthBarAlpha;
-		uiGroup.add(iconP2);
 
-		scoreTxt = new FlxText(0, healthBar.y + 40, FlxG.width, "", 20);
+		scoreTxt = new FlxText(0, healthBar.y + 140, FlxG.width, "", 20);
 		scoreTxt.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER, FlxTextBorderStyle.OUTLINE, FlxColor.BLACK);
 		scoreTxt.scrollFactor.set();
 		scoreTxt.borderSize = 1.25;
@@ -702,8 +714,7 @@ class PlayState extends MusicBeatState
 	#end
 
 	public function reloadHealthBarColors() {
-		healthBar.setColors(FlxColor.fromRGB(dad.healthColorArray[0], dad.healthColorArray[1], dad.healthColorArray[2]),
-			FlxColor.fromRGB(boyfriend.healthColorArray[0], boyfriend.healthColorArray[1], boyfriend.healthColorArray[2]));
+		healthBar.setColors(0xFFFF0000, 0xFF31C431);
 	}
 
 	public function addCharacterToList(newCharacter:String, type:Int) {
@@ -1011,10 +1022,24 @@ class PlayState extends MusicBeatState
 						FlxG.sound.play(Paths.sound('intro1' + introSoundsSuffix), 0.6);
 						tick = ONE;
 					case 3:
-						countdownGo = createCountdownSprite(introAlts[2], antialias);
-						FlxG.sound.play(Paths.sound('introGo' + introSoundsSuffix), 0.6);
+						countdownGo = new FlxSprite(-100, -250);
+						countdownGo.scale.x = 1.2;
+						countdownGo.scale.y = 1.2;
+						countdownGo.frames = Paths.getSparrowAtlas('goBFB');
+						countdownGo.animation.addByPrefix('Go', 'GO', 24, false);
+						uiGroup.add(countdownGo);
+						countdownGo.animation.play('Go');
+						FlxG.sound.play(Paths.sound('introGo'), 0.6);
 						tick = GO;
 					case 4:
+						FlxTween.tween(countdownGo, {alpha: 0}, Conductor.crochet / 1000, {
+							ease: FlxEase.cubeInOut,
+							onComplete: function(twn:FlxTween)
+							{
+								remove(countdownGo);
+								countdownGo.destroy();
+							}
+						});
 						tick = START;
 				}
 
