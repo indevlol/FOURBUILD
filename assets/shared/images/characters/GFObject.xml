@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="GFObject.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="GfObject Crying instance 10000" x="0" y="0" width="370" height="297" frameX="0" frameY="-6" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10001" x="0" y="0" width="370" height="297" frameX="0" frameY="-6" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10002" x="370" y="0" width="370" height="303" frameX="-1" frameY="0" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10003" x="370" y="0" width="370" height="303" frameX="-1" frameY="0" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10004" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10005" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10006" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10007" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10008" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10009" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10010" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10011" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10012" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Crying instance 10013" x="740" y="0" width="371" height="301" frameX="0" frameY="-2" frameWidth="371" frameHeight="303"/>
+	<SubTexture name="GfObject Hey instance 10000" x="1111" y="0" width="367" height="299" frameX="0" frameY="0" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10001" x="1111" y="0" width="367" height="299" frameX="0" frameY="0" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10002" x="1478" y="0" width="360" height="293" frameX="-4" frameY="-7" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10003" x="1478" y="0" width="360" height="293" frameX="-4" frameY="-7" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10004" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10005" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10006" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10007" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10008" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10009" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10010" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10011" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10012" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Hey instance 10013" x="0" y="303" width="363" height="297" frameX="-3" frameY="-3" frameWidth="367" frameHeight="300"/>
+	<SubTexture name="GfObject Normal instance 10000" x="363" y="303" width="373" height="292" frameX="0" frameY="-15" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10001" x="363" y="303" width="373" height="292" frameX="0" frameY="-15" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10002" x="736" y="303" width="367" height="291" frameX="-1" frameY="-16" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10003" x="736" y="303" width="367" height="291" frameX="-1" frameY="-16" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10004" x="1103" y="303" width="366" height="290" frameX="-3" frameY="-17" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10005" x="1103" y="303" width="366" height="290" frameX="-3" frameY="-17" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10006" x="1469" y="303" width="367" height="301" frameX="-11" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10007" x="1469" y="303" width="367" height="301" frameX="-11" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10008" x="0" y="604" width="366" height="301" frameX="-13" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10009" x="0" y="604" width="366" height="301" frameX="-13" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10010" x="366" y="604" width="367" height="300" frameX="-13" frameY="-7" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10011" x="366" y="604" width="367" height="300" frameX="-13" frameY="-7" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10012" x="733" y="604" width="364" height="298" frameX="-14" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10013" x="733" y="604" width="364" height="298" frameX="-14" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10014" x="1097" y="604" width="354" height="302" frameX="-27" frameY="-5" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10015" x="1097" y="604" width="354" height="302" frameX="-27" frameY="-5" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10016" x="1451" y="604" width="357" height="303" frameX="-28" frameY="-4" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10017" x="1451" y="604" width="357" height="303" frameX="-28" frameY="-4" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10018" x="0" y="907" width="357" height="307" frameX="-26" frameY="0" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10019" x="0" y="907" width="357" height="307" frameX="-26" frameY="0" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10020" x="357" y="907" width="367" height="301" frameX="-11" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10021" x="357" y="907" width="367" height="301" frameX="-11" frameY="-6" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10022" x="724" y="907" width="366" height="298" frameX="-9" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10023" x="724" y="907" width="366" height="298" frameX="-9" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10024" x="1090" y="907" width="365" height="298" frameX="-9" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10025" x="1090" y="907" width="365" height="298" frameX="-9" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10026" x="1455" y="907" width="364" height="298" frameX="-8" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="GfObject Normal instance 10027" x="1455" y="907" width="364" height="298" frameX="-8" frameY="-9" frameWidth="385" frameHeight="307"/>
+	<SubTexture name="sPEAKER instance 10000" x="1819" y="907" width="148" height="161" frameX="-1" frameY="0" frameWidth="149" frameHeight="161"/>
+	<SubTexture name="sPEAKER instance 10001" x="1819" y="907" width="148" height="161" frameX="-1" frameY="0" frameWidth="149" frameHeight="161"/>
+	<SubTexture name="sPEAKER instance 10002" x="0" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10003" x="0" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10004" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10005" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10006" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10007" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10008" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10009" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10010" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10011" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10012" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 10013" x="149" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20000" x="298" y="1214" width="148" height="161" frameX="-1" frameY="0" frameWidth="149" frameHeight="161"/>
+	<SubTexture name="sPEAKER instance 20001" x="298" y="1214" width="148" height="161" frameX="-1" frameY="0" frameWidth="149" frameHeight="161"/>
+	<SubTexture name="sPEAKER instance 20002" x="446" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20003" x="446" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20004" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20005" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20006" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20007" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20008" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20009" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20010" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20011" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20012" x="595" y="1214" width="149" height="161"/>
+	<SubTexture name="sPEAKER instance 20013" x="595" y="1214" width="149" height="161"/>
+</TextureAtlas>

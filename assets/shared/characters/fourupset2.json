@@ -1,0 +1,78 @@
+{
+	"animations": [
+		{
+			"loop": true,
+			"offsets": [
+				2,
+				0
+			],
+			"anim": "idle",
+			"fps": 24,
+			"name": "fourmadnormalidle",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singDOWN",
+			"fps": 24,
+			"name": "fourmadnormaldown",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singRIGHT",
+			"fps": 24,
+			"name": "fourmadnormalright",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singUP",
+			"fps": 24,
+			"name": "fourmadnormalup",
+			"indices": []
+		},
+		{
+			"loop": false,
+			"offsets": [
+				0,
+				0
+			],
+			"anim": "singLEFT",
+			"fps": 24,
+			"name": "fourmadnormalleft",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/fourmad2ndhalf",
+	"position": [
+		0,
+		110
+	],
+	"healthicon": "four",
+	"flip_x": false,
+	"healthbar_colors": [
+		98,
+		115,
+		255
+	],
+	"camera_position": [
+		-300,
+		60
+	],
+	"sing_duration": 6.1,
+	"scale": 1
+}

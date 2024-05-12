@@ -1,0 +1,100 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "idle",
+			"indices": [],
+			"name": "idle"
+		},
+		{
+			"offsets": [
+				384,
+				10
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singLEFT",
+			"indices": [],
+			"name": "left"
+		},
+		{
+			"offsets": [
+				30,
+				-90
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singDOWN",
+			"indices": [],
+			"name": "down"
+		},
+		{
+			"offsets": [
+				260,
+				130
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singUP",
+			"indices": [],
+			"name": "up"
+		},
+		{
+			"offsets": [
+				-100,
+				8
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "singRIGHT",
+			"indices": [],
+			"name": "right"
+		},
+		{
+			"offsets": [
+				159,
+				82
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "screech",
+			"indices": [],
+			"name": "screech"
+		},
+		{
+			"loop": false,
+			"offsets": [
+				179,
+				131
+			],
+			"anim": "bfb",
+			"fps": 24,
+			"name": "pose",
+			"indices": []
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/four_assets",
+	"position": [
+		0,
+		60
+	],
+	"healthicon": "four",
+	"flip_x": false,
+	"healthbar_colors": [
+		51,
+		124,
+		207
+	],
+	"camera_position": [
+		50,
+		150
+	],
+	"sing_duration": 6.1,
+	"scale": 0.7
+}

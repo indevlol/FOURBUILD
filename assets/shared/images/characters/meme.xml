@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="meme.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="meme down instance 10000" x="0" y="0" width="1281" height="721" frameX="0" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10001" x="0" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10002" x="1281" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10003" x="1281" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10004" x="2562" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10005" x="2562" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme down instance 10006" x="2562" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10000" x="3843" y="0" width="1281" height="721" frameX="0" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10001" x="3843" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10002" x="5124" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10003" x="6405" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10004" x="6405" y="0" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10005" x="0" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10006" x="0" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10007" x="0" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10008" x="1281" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10009" x="1281" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10010" x="1281" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10011" x="1281" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10012" x="2562" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme idle instance 10013" x="2562" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10000" x="3843" y="721" width="1281" height="721" frameX="0" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10001" x="3843" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10002" x="5124" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10003" x="6405" y="721" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10004" x="0" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10005" x="0" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme left instance 10006" x="0" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10000" x="1281" y="1442" width="1281" height="721" frameX="0" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10001" x="1281" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10002" x="2562" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10003" x="2562" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10004" x="3843" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10005" x="3843" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme right instance 10006" x="3843" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10000" x="5124" y="1442" width="1281" height="721" frameX="0" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10001" x="5124" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10002" x="6405" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10003" x="6405" y="1442" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10004" x="0" y="2163" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10005" x="0" y="2163" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+	<SubTexture name="meme up instance 10006" x="0" y="2163" width="1281" height="721" frameX="-1" frameY="0" frameWidth="1282" frameHeight="721"/>
+</TextureAtlas>

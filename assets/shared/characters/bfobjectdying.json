@@ -1,0 +1,56 @@
+{
+	"animations": [
+		{
+			"offsets": [
+				-18,
+				107
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "firstDeath",
+			"indices": [],
+			"name": "BFObject GameOverHit instance"
+		},
+		{
+			"offsets": [
+				-19,
+				-9
+			],
+			"loop": true,
+			"fps": 24,
+			"anim": "deathLoop",
+			"indices": [],
+			"name": "BFObject GameOverLoop instance"
+		},
+		{
+			"offsets": [
+				-19,
+				-9
+			],
+			"loop": false,
+			"fps": 24,
+			"anim": "deathConfirm",
+			"indices": [],
+			"name": "BFObject GameOverRetry instance"
+		}
+	],
+	"no_antialiasing": false,
+	"image": "characters/BFObjectDEAD",
+	"position": [
+		0,
+		490
+	],
+	"healthicon": "bf",
+	"flip_x": true,
+	"healthbar_colors": [
+		49,
+		176,
+		209
+	],
+	"camera_position": [
+		350,
+		-160
+	],
+	"sing_duration": 4,
+	"scale": 1.1
+}
