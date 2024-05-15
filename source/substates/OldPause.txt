@@ -16,8 +16,7 @@ import states.StoryMenuState;
 import states.FreeplayState;
 import options.OptionsState;
 
-class PauseSubState extends MusicBeatSubstate
-{
+class PauseSubState extends MusicBeatSubstate {
 	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItemsOG:Array<String> = ['Play', 'Restart Song', 'Options', 'Exit to menu'];
