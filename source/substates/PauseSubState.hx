@@ -30,7 +30,7 @@ class PauseSubState extends MusicBeatSubstate
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 
 	var Y = 100;
-	var menuItems:FlxTypedContainer<FlxSprite>;
+	var menuItems:FlxTypedGroup<FlxSprite>;
 	var pauseCam:FlxCamera;
 
 	public static var songName:String = null;
@@ -41,7 +41,7 @@ class PauseSubState extends MusicBeatSubstate
 		pauseCam = new FlxCamera();
 		pauseCam.bgColor.alphaFloat = 0.5;
 		FlxG.cameras.add(pauseCam, false);
-		menuItems = new FlxTypedContainer<FlxSprite>();
+		menuItems = new FlxTypedGroup<FlxSprite>();
 		menuItems.cameras = [pauseCam];
 		add(menuItems);
 		for (i in 0...menuItemsOG.length) {
