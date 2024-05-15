@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Untitled-1.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="OptionsIdle0000" x="0" y="0" width="239" height="93"/>
+	<SubTexture name="OptionsSelected0001" x="239" y="0" width="239" height="93"/>
+	<SubTexture name="PlayIdle0000" x="0" y="93" width="240" height="93"/>
+	<SubTexture name="PlaySelected0001" x="240" y="93" width="240" height="93"/>
+	<SubTexture name="Exit to menuIdle0000" x="0" y="186" width="239" height="93"/>
+	<SubTexture name="Exit to menuSelected0001" x="239" y="186" width="239" height="93"/>
+	<SubTexture name="PauseMenuIdle0000" x="0" y="279" width="239" height="93"/>
+	<SubTexture name="PauseMenuSelected0001" x="239" y="279" width="239" height="93"/>
+	<SubTexture name="Restart SongIdle0000" x="0" y="372" width="239" height="93"/>
+	<SubTexture name="Restart SongSelected0001" x="239" y="372" width="239" height="93"/>	
+
+</TextureAtlas>
