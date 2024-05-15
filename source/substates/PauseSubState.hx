@@ -36,7 +36,7 @@ class PauseSubState extends MusicBeatSubstate
 
 	override function create()
 	{
-	
+		FlxG.mouse.visible = true;
 		pauseCam = new FlxCamera();
 		pauseCam.bgColor.alphaFloat = 0.5;
 		FlxG.cameras.add(pauseCam, false);
