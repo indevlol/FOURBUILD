@@ -6,7 +6,6 @@ import backend.Song;
 import states.PlayState;
 import flixel.FlxObject;
 import backend.Section;
-import flixel.group.FlxContainer;
 
 import flixel.addons.transition.FlxTransitionableState;
 
