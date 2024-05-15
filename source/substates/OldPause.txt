@@ -6,7 +6,7 @@ import backend.Song;
 import states.PlayState;
 import flixel.FlxObject;
 import backend.Section;
-import flixel.group.FlxContainer;
+
 
 import flixel.addons.transition.FlxTransitionableState;
 
@@ -18,6 +18,7 @@ import options.OptionsState;
 
 class PauseSubState extends MusicBeatSubstate
 {
+	var grpMenuShit:FlxTypedGroup<Alphabet>;
 
 	var menuItemsOG:Array<String> = ['Play', 'Restart Song', 'Options', 'Exit to menu'];
 	var difficultyChoices = [];
@@ -29,24 +30,22 @@ class PauseSubState extends MusicBeatSubstate
 	var skipTimeTracker:Alphabet;
 	var curTime:Float = Math.max(0, Conductor.songPosition);
 
-	var Y = 100;
-	var menuItems:FlxTypedContainer<FlxSprite>;
-	var pauseCam:FlxCamera;
+	var missingTextBG:FlxSprite;
+	var missingText:FlxText;
 
+	var Y = 200;
+	var menuItems:FlxTypedGroup<FlxSprite>;
 	public static var songName:String = null;
 
 	override function create()
 	{
-	
-		pauseCam = new FlxCamera();
-		pauseCam.bgColor.alphaFloat = 0.5;
-		FlxG.cameras.add(pauseCam, false);
-		menuItems = new FlxTypedContainer<FlxSprite>();
-		menuItems.cameras = [pauseCam];
+		unzoom();
+		menuItems = new FlxTypedGroup<FlxSprite>();
 		add(menuItems);
+
 		for (i in 0...menuItemsOG.length) {
 			Y += 100;
-			var menuItem:FlxSprite = new FlxSprite(500, Y);
+			var menuItem:FlxSprite = new FlxSprite(300, Y);
 			menuItem.frames = Paths.getSparrowAtlas('uipause/PauseMenuButtons');
 			menuItem.animation.addByPrefix('idle', menuItemsOG[i] + 'Idle');
 			menuItem.animation.addByPrefix('selected', menuItemsOG[i] + 'Selected');
@@ -70,13 +69,13 @@ class PauseSubState extends MusicBeatSubstate
 	var cantUnpause:Float = 0.1;
 	override function update(elapsed:Float)
 	{
-		mouse();
+
 		super.update(elapsed);
 
 		if(controls.BACK)
 		{
+			unzoom("end");
 			close();
-			pauseCam.bgColor.alphaFloat = 0;
 			return;
 		}
 
@@ -92,14 +91,14 @@ class PauseSubState extends MusicBeatSubstate
 
 		var daSelected:String = menuItemsOG[curSelected];
 
-		if (controls.ACCEPT || FlxG.mouse.justPressed && (cantUnpause <= 0 || !controls.controllerMode))
+		if (controls.ACCEPT && (cantUnpause <= 0 || !controls.controllerMode))
 		{
 			
 			switch (daSelected)
 			{
 				case "Play":
 					close();
-					pauseCam.bgColor.alphaFloat = 0;
+					unzoom();
 
 				case "Restart Song":
 					restartSong();
@@ -107,8 +106,15 @@ class PauseSubState extends MusicBeatSubstate
 					PlayState.instance.paused = true; // For lua
 					PlayState.instance.vocals.volume = 0;
 					MusicBeatState.switchState(new OptionsState());
+					if(ClientPrefs.data.pauseMusic != 'None')
+					{
+						FlxG.sound.playMusic(Paths.music(Paths.formatToSongPath(ClientPrefs.data.pauseMusic)), pauseMusic.volume);
+						FlxTween.tween(FlxG.sound.music, {volume: 1}, 0.8);
+						FlxG.sound.music.time = pauseMusic.time;
+					}
 					OptionsState.onPlayState = true;
 				case "Exit to menu":
+					unzoom("end");
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
 					PlayState.deathCounter = 0;
 					PlayState.seenCutscene = false;
@@ -128,32 +134,21 @@ class PauseSubState extends MusicBeatSubstate
 	}
 
 
-	function mouse() {
-		var hovering:Bool = false; // Flag to track if the mouse is hovering over any menu item
-		
-		if(FlxG.mouse.justMoved) {
-			// Iterate through each menu item
-			for (i in 0...menuItems.length)
-				{
-					menuItems.members[i].updateHitbox();
-				if (i != curSelected)
-				{
-					if (FlxG.mouse.overlaps(menuItems.members[i]))
-					{
-						hovering = true;
-						changeSelection(i, "mouse");
-					}
-				}
+	function unzoom(mode:String = "start") {
+		var noteData:Array<SwagSection>;
+		var songData = PlayState.SONG;
+		noteData = songData.notes;
 
-				
+		for(section in noteData) {
+			if(mode == "start")
+				(cast FlxG.state:PlayState).camFollow.setPosition(770, 600);
+			if(mode == "end") {
+				(cast FlxG.state:PlayState).moveCamera(section.mustHitSection);			
 			}
+			FlxG.camera.follow(PlayState.instance.camFollow, LOCKON, 0);
+			FlxG.camera.zoom = FlxMath.lerp(1.05, 1.05, 1);
+				
 		}
-
-		if(FlxG.mouse.justPressedRight) {
-			close();
-			pauseCam.bgColor.alphaFloat = 0;
-		}
-		
 	}
 
 	function deleteSkipTimeText()
@@ -184,7 +179,6 @@ class PauseSubState extends MusicBeatSubstate
 
 	function changeSelection(change:Int = 0, mode:String = "default"):Void
 	{
-		menuItems.members[curSelected].animation.play('idle');
 		if(mode == "default")
 			curSelected += change;
 		else if (mode == "mouse")
@@ -200,7 +194,6 @@ class PauseSubState extends MusicBeatSubstate
 			curSelected = 0;
 
 		var bullShit:Int = 0;
-		menuItems.members[curSelected].animation.play('selected');
 	}
 
 	
