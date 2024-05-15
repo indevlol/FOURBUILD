@@ -10,4 +10,6 @@
 	<SubTexture name="Quit instance 10001" x="239" y="186" width="239" height="93"/>
 	<SubTexture name="menu button instance 10000" x="0" y="279" width="239" height="93"/>
 	<SubTexture name="menu button instance 10001" x="239" y="279" width="239" height="93"/>
+	<SubTexture name="restart instance 10000" x="0" y="372" width="239" height="93"/>
+	<SubTexture name="restart instance 10001" x="239" y="372" width="239" height="93"/>
 </TextureAtlas>
