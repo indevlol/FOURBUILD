@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="FREEPLAY.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="BonusIdle0000" x="0" y="0" width="456" height="862" frameX="-14" frameY="-16" frameWidth="482" frameHeight="893"/>
+	<SubTexture name="BonusSelected0000" x="456" y="0" width="482" height="893"/>
+	<SubTexture name="MainIdle0000" x="938" y="0" width="456" height="862" frameX="-13" frameY="-16" frameWidth="482" frameHeight="893"/>
+	<SubTexture name="MainSelected0000" x="1394" y="0" width="482" height="893"/>
+</TextureAtlas>
