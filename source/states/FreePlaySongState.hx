@@ -414,7 +414,6 @@ class FreePlaySongState extends MusicBeatState{
 
 
             var lastList:Array<String> = Difficulty.list;
-            curSelected += change;
 
             if (curSelected < 0)
                   curSelected = songs.length - 1;
