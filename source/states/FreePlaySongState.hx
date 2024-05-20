@@ -57,6 +57,9 @@ class FreePlaySongState extends MusicBeatState{
 
       var leftSpikyThing:FlxSprite;
       var rightSpikyThing:FlxSprite;
+      var elapsedTime:Float = 0;
+      var leftStartY:Float;
+      var rightStartY:Float;
 
       override function create()
       {
@@ -187,19 +190,21 @@ class FreePlaySongState extends MusicBeatState{
             add(rightArrow);
             rightArrow.animation.play('idle');
 
-            leftSpikyThing = new FlxSprite(-100, -190);
+            leftSpikyThing = new FlxSprite(-100, -240);
             leftSpikyThing.loadGraphic(Paths.image('menus/freeplay/spikething'));
             leftSpikyThing.scale.x = .7;
             leftSpikyThing.scale.y = .7;
             add(leftSpikyThing);
 
-            rightSpikyThing = new FlxSprite(1000, -190);
+            rightSpikyThing = new FlxSprite(1000, -240);
             rightSpikyThing.loadGraphic(Paths.image('menus/freeplay/spikething'));
             rightSpikyThing.scale.x = .7;
             rightSpikyThing.scale.y = .7;
             rightSpikyThing.angle = 180;
             add(rightSpikyThing);
 
+            rightStartY = rightSpikyThing.y;
+            leftStartY = leftSpikyThing.y;
 
             if(curSelected >= songs.length) curSelected = 0;
             curDifficulty = Math.round(Math.max(0, Difficulty.defaultList.indexOf(lastDifficultyName)));
@@ -209,6 +214,11 @@ class FreePlaySongState extends MusicBeatState{
       override function update(elapsed:Float) {
 
             
+            elapsedTime += elapsed;
+
+            // Move spikeThing up and down using sine wave
+            leftSpikyThing.y = leftStartY + Math.sin(elapsedTime * Math.PI * 2 * 0.5) * 50;
+            rightSpikyThing.y = rightStartY + Math.sin(elapsedTime * Math.PI * 2 * 0.5) * -50;
 
             lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 24)));
 		lerpRating = FlxMath.lerp(intendedRating, lerpRating, Math.exp(-elapsed * 12));
