@@ -59,6 +59,8 @@ import psychlua.HScript;
 import tea.SScript;
 #end
 
+
+
 /**
  * This is where all the Gameplay stuff happens and is managed
  *
@@ -268,6 +270,10 @@ class PlayState extends MusicBeatState
 	// Callbacks for stages
 	public var startCallback:Void->Void = null;
 	public var endCallback:Void->Void = null;
+
+
+	public static var staticMisses:Int = 0;
+
 
 	override public function create()
 	{
@@ -1651,6 +1657,8 @@ class PlayState extends MusicBeatState
 
 	override public function update(elapsed:Float)
 	{
+
+		staticMisses = songMisses;
 		if(!inCutscene && !paused && !freezeCamera) {
 			FlxG.camera.followLerp = 2.4 * cameraSpeed * playbackRate;
 			if(!startingSong && !endingSong && boyfriend.getAnimationName().startsWith('idle')) {
@@ -1834,6 +1842,8 @@ class PlayState extends MusicBeatState
 		setOnScripts('botPlay', cpuControlled);
 		callOnScripts('onUpdatePost', [elapsed]);
 	}
+
+
 
 	// Health icon updaters
 	public dynamic function updateIconsScale(elapsed:Float)
@@ -2312,6 +2322,7 @@ class PlayState extends MusicBeatState
 	public var transitioning = false;
 	public function endSong()
 	{
+		
 		//Should kill you if you tried to cheat
 		if(!startingSong) {
 			notes.forEach(function(daNote:Note) {
@@ -2371,37 +2382,44 @@ class PlayState extends MusicBeatState
 
 				if (storyPlaylist.length <= 0)
 				{
+					
+					if(ClientPrefs.data.cakeAtStake && songMisses > CakeAtStakeState.limitStaticMisses) {
+						MusicBeatState.switchState(new CakeAtStakeState());
+					} else {
+						MusicBeatState.switchState(new StoryMenuState());
+					}
 					Mods.loadTopMod();
 					FlxG.sound.playMusic(Paths.music('freakyMenu'));
 					#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
-
-					MusicBeatState.switchState(new StoryMenuState());
-
 					// if ()
 					if(!ClientPrefs.getGameplaySetting('practice') && !ClientPrefs.getGameplaySetting('botplay')) {
 						StoryMenuState.weekCompleted.set(WeekData.weeksList[storyWeek], true);
 						Highscore.saveWeekScore(WeekData.getWeekFileName(), campaignScore, storyDifficulty);
-
+						
 						FlxG.save.data.weekCompleted = StoryMenuState.weekCompleted;
 						FlxG.save.flush();
 					}
 					changedDifficulty = false;
+
 				}
 				else
 				{
 					var difficulty:String = Difficulty.getFilePath();
-
-					trace('LOADING NEXT SONG');
-					trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
-
-					FlxTransitionableState.skipNextTransIn = true;
-					FlxTransitionableState.skipNextTransOut = true;
-					prevCamFollow = camFollow;
-
-					PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
-					FlxG.sound.music.stop();
-
-					LoadingState.loadAndSwitchState(new PlayState());
+					
+					if(ClientPrefs.data.cakeAtStake && songMisses > CakeAtStakeState.limitStaticMisses) {
+						MusicBeatState.switchState(new CakeAtStakeState());
+					} else {
+						trace('LOADING NEXT SONG');
+						trace(Paths.formatToSongPath(PlayState.storyPlaylist[0]) + difficulty);
+	
+						FlxTransitionableState.skipNextTransIn = true;
+						FlxTransitionableState.skipNextTransOut = true;
+						prevCamFollow = camFollow;
+	
+						PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0] + difficulty, PlayState.storyPlaylist[0]);
+						FlxG.sound.music.stop();
+						MusicBeatState.switchState(new PlayState());
+					}
 				}
 			}
 			else
@@ -2409,14 +2427,18 @@ class PlayState extends MusicBeatState
 				trace('WENT BACK TO FREEPLAY??');
 				Mods.loadTopMod();
 				#if DISCORD_ALLOWED DiscordClient.resetClientID(); #end
-
-				MusicBeatState.switchState(new FreeplayState());
+				if(ClientPrefs.data.cakeAtStake && songMisses > CakeAtStakeState.limitStaticMisses) {
+					MusicBeatState.switchState(new CakeAtStakeState());
+				} else {
+					MusicBeatState.switchState(new FreeplayState());
+				}
 				FlxG.sound.playMusic(Paths.music('freakyMenu'));
 				changedDifficulty = false;
 			}
 			transitioning = true;
 		}
 		return true;
+
 	}
 
 	public function KillNotes() {
