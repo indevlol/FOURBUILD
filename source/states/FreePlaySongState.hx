@@ -159,6 +159,7 @@ class FreePlaySongState extends MusicBeatState{
 
                   case 1:
                         songs = [];
+                        addSong("Gay", 3, "Four", FlxColor.BLUE);     
 
             }
             
