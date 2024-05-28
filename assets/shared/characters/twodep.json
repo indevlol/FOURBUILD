@@ -1,66 +1,66 @@
 {
 	"animations": [
 		{
-			"loop": false,
 			"offsets": [
-				0,
+				1,
 				0
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "idle",
-			"fps": 24,
-			"name": "idle",
-			"indices": []
+			"loop": false,
+			"name": "twodepidle"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singLEFT",
-			"fps": 24,
-			"name": "left",
-			"indices": []
+			"loop": false,
+			"name": "twodepleft"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
+			"indices": [],
+			"fps": 24,
 			"anim": "singDOWN",
-			"fps": 24,
-			"name": "down",
-			"indices": []
+			"loop": false,
+			"name": "twodepdown"
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "singUP",
+			"indices": [],
 			"fps": 24,
-			"name": "up",
-			"indices": []
+			"anim": "singUP",
+			"loop": false,
+			"name": "twodepup"
 		},
 		{
-			"loop": false,
 			"offsets": [
-				3,
+				0,
 				0
 			],
-			"anim": "singRIGHT",
+			"indices": [],
 			"fps": 24,
-			"name": "right",
-			"indices": []
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "twodepright"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/TWOLMAODEP",
+	"image": "characters/twodep",
 	"position": [
-		-470,
-		90
+		-330,
+		50
 	],
 	"healthicon": "two",
 	"flip_x": false,
@@ -70,9 +70,9 @@
 		74
 	],
 	"camera_position": [
-		200,
-		80
+		0,
+		0
 	],
 	"sing_duration": 6.1,
-	"scale": 0.9
+	"scale": 1
 }

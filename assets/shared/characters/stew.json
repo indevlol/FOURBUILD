@@ -1,78 +1,80 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "stew idle"
+			"fps": 24,
+			"name": "stew idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				180,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "stew left"
+			"fps": 24,
+			"name": "stew left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-40,
 				-31
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "stew down"
+			"fps": 24,
+			"name": "stew down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				10
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "stew up"
+			"fps": 24,
+			"name": "stew up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-64,
 				-15
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "stew right"
+			"fps": 24,
+			"name": "stew right",
+			"indices": []
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/stewposes",
 	"position": [
 		0,
 		270
 	],
-	"healthicon": "face",
+	"healthicon": "stew",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		191,
+		0,
+		0
 	],
 	"camera_position": [
 		130,
 		0
 	],
 	"sing_duration": 6.1,
-	"scale": 0.9
+	"scale": 0.9,
+	"_editor_isPlayer": false
 }

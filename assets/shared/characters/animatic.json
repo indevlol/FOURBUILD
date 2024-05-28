@@ -1,61 +1,62 @@
 {
 	"animations": [
 		{
+			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "idle",
-			"indices": [],
-			"name": "animatic idle"
+			"fps": 24,
+			"name": "animatic idle",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				470,
 				28
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singLEFT",
-			"indices": [],
-			"name": "animatic left"
+			"fps": 24,
+			"name": "animatic left",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				62,
 				-127
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singDOWN",
-			"indices": [],
-			"name": "animatic down"
+			"fps": 24,
+			"name": "animatic down",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-1,
 				160
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singUP",
-			"indices": [],
-			"name": "animatic up"
+			"fps": 24,
+			"name": "animatic up",
+			"indices": []
 		},
 		{
+			"loop": false,
 			"offsets": [
 				-70,
 				125
 			],
-			"loop": false,
-			"fps": 24,
 			"anim": "singRIGHT",
-			"indices": [],
-			"name": "animatic right"
+			"fps": 24,
+			"name": "animatic right",
+			"indices": []
 		}
 	],
+	"vocals_file": "",
 	"no_antialiasing": false,
 	"image": "characters/animatic",
 	"position": [
@@ -65,14 +66,15 @@
 	"healthicon": "animatic",
 	"flip_x": false,
 	"healthbar_colors": [
-		161,
-		161,
-		161
+		255,
+		255,
+		255
 	],
 	"camera_position": [
 		-120,
 		0
 	],
 	"sing_duration": 6.1,
-	"scale": 1.4
+	"scale": 1.4,
+	"_editor_isPlayer": false
 }

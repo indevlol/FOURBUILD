@@ -1,0 +1,47 @@
+{
+	"animations": [
+		{
+			"loop": false,
+			"offsets": [
+				4,
+				0
+			],
+			"anim": "NO!2",
+			"fps": 24,
+			"name": "NO!2",
+			"indices": []
+		},
+		{
+			"offsets": [
+				0,
+				0
+			],
+			"indices": [],
+			"fps": 24,
+			"anim": "",
+			"loop": false,
+			"name": ""
+		}
+	],
+	"vocals_file": "",
+	"no_antialiasing": false,
+	"image": "characters/twoNO2!",
+	"position": [
+		-330,
+		50
+	],
+	"healthicon": "two",
+	"flip_x": false,
+	"healthbar_colors": [
+		72,
+		196,
+		74
+	],
+	"camera_position": [
+		0,
+		0
+	],
+	"sing_duration": 6.1,
+	"scale": 1,
+	"_editor_isPlayer": false
+}

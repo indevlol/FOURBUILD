@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="Home.png">
+	<!-- Created with Adobe Animate version 21.0.6.41649 -->
+	<!-- http://www.adobe.com/products/animate.html -->
+	<SubTexture name="Home instance 10000" x="0" y="0" width="107" height="41"/>
+	<SubTexture name="Home instance 10001" x="0" y="41" width="106" height="31" frameX="0" frameY="0" frameWidth="107" frameHeight="41"/>
+</TextureAtlas>

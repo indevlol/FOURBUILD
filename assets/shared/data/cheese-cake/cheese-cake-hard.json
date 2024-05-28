@@ -1,6 +1,6 @@
 {
 	"song": {
-		"player1": "bfobjectbfdi",
+		"player1": "bfobject",
 		"events": [
 			[
 				37500,
@@ -9,6 +9,56 @@
 						"Change Scroll Speed",
 						"1.2",
 						"1"
+					]
+				]
+			],
+			[
+				43500,
+				[
+					[
+						"Change Character",
+						"dad",
+						"twoNO!"
+					]
+				]
+			],
+			[
+				43593.75,
+				[
+					[
+						"Play Animation",
+						"NO!",
+						"dad"
+					]
+				]
+			],
+			[
+				47343.75,
+				[
+					[
+						"Change Character",
+						"dad",
+						"twoNO2!"
+					]
+				]
+			],
+			[
+				47437.5,
+				[
+					[
+						"Play Animation",
+						"NO!2",
+						"dad"
+					]
+				]
+			],
+			[
+				50997.65625,
+				[
+					[
+						"Change Character",
+						"dad",
+						"twodep"
 					]
 				]
 			],
@@ -1313,22 +1363,17 @@
 				"sectionNotes": [
 					[
 						43500,
-						0,
+						4,
 						656.25
 					],
 					[
 						43875,
-						2,
+						6,
 						281.25
 					]
 				],
 				"lengthInSteps": 16,
-				"mustHitSection": true
-			},
-			{
-				"sectionNotes": [],
-				"lengthInSteps": 16,
-				"mustHitSection": true
+				"mustHitSection": false
 			},
 			{
 				"sectionNotes": [],
@@ -1338,12 +1383,17 @@
 			{
 				"sectionNotes": [],
 				"lengthInSteps": 16,
-				"mustHitSection": true
+				"mustHitSection": false
 			},
 			{
 				"sectionNotes": [],
 				"lengthInSteps": 16,
-				"mustHitSection": true
+				"mustHitSection": false
+			},
+			{
+				"sectionNotes": [],
+				"lengthInSteps": 16,
+				"mustHitSection": false
 			},
 			{
 				"sectionNotes": [

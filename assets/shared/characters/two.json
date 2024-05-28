@@ -8,7 +8,7 @@
 			],
 			"anim": "idle",
 			"fps": 24,
-			"name": "two idle",
+			"name": "twoidle",
 			"indices": []
 		},
 		{
@@ -45,34 +45,34 @@
 			"indices": []
 		},
 		{
-			"loop": false,
 			"offsets": [
 				0,
 				0
 			],
-			"anim": "singRIGHT",
+			"indices": [],
 			"fps": 24,
-			"name": "tworight",
-			"indices": []
+			"anim": "singRIGHT",
+			"loop": false,
+			"name": "tworight"
 		}
 	],
 	"no_antialiasing": false,
-	"image": "characters/TWOLMAO",
+	"image": "characters/two",
 	"position": [
-		-470,
-		90
+		-330,
+		50
 	],
 	"healthicon": "two",
 	"flip_x": false,
 	"healthbar_colors": [
-		72,
-		196,
-		74
+		161,
+		161,
+		161
 	],
 	"camera_position": [
-		200,
-		80
+		0,
+		0
 	],
 	"sing_duration": 6.1,
-	"scale": 0.9
+	"scale": 1
 }
