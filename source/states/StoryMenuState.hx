@@ -37,6 +37,15 @@ class StoryMenuState extends MusicBeatState
 	var youtube:FlxSprite;
 	var videos:FlxTypedGroup<FlxSprite>;
 	var camFollow:FlxObject;
+	var videosLabel:FlxTypedGroup<FlxText>;
+	var ct:Int = 0;
+	var allowedDif:Bool = false;
+	var videosLabels:Array<String> = [
+	"                      Tutorial \n     The Left Right Song You Know It",
+	"                        Vs Four \n          Versus The Number Four",
+	"                        Vs Two \n               The Power Of Two",
+	"                    Vs Annoucer \n The Mystrious Talking Box Thingie"
+	];
 	override function create()
 	{
 		FlxG.camera.bgColor = FlxColor.fromRGB(15, 15, 15);
@@ -83,6 +92,10 @@ class StoryMenuState extends MusicBeatState
 		var x:Int = -1100;
 		videos = new FlxTypedGroup<FlxSprite>();
 		add(videos);
+		
+		videosLabel = new FlxTypedGroup<FlxText>();
+		add(videosLabel);
+
 		for (i in 0...WeekData.weeksList.length)
 		{
 			var weekFile:WeekData = WeekData.weeksLoaded.get(WeekData.weeksList[i]);
@@ -116,9 +129,14 @@ class StoryMenuState extends MusicBeatState
 			video.scale.y = 0.2;
 			videos.add(video);
 			
-		
 		}
-
+		var xPos:Int = -1100;
+		for (i in 0...videosLabels.length) {
+			xPos += 500;
+			trace(videosLabels[i]);
+			var videoText:FlxText =  new FlxText(xPos + 780, 710, videos.members[0].width, videosLabels[i], 15);
+			videosLabel.add(videoText);
+		}
 
 		for(i in 0...videos.length) {
 			if(i % 2 == 0 && i != 0) {
@@ -134,11 +152,29 @@ class StoryMenuState extends MusicBeatState
 					for(k in 0...j - 1) {
 						videos.members[j].x = (videos.members[0].x + (500 * k)) ;
 					}
-					videos.members[j].y = (videos.members[0].y + 50) * newIndex;
-					trace(" x -> " + videos.members[j].x + " y -> " + videos.members[j].y);
+					videos.members[j].y = (videos.members[0].y + 75) * newIndex;
+					trace(" V(x) -> " + videos.members[j].x + " V(y) -> " + videos.members[j].y);
 				}
 			}
 		}
+
+
+		for(i in 0...videosLabel.length) {
+			if(i % 2 == 0 && i != 0) {
+				var newIndex = 0;
+				newIndex = i + 1;
+				for(j in newIndex - 1...newIndex + 1) {
+
+					for(k in 0...j - 1) {
+						videosLabel.members[j].x = (videosLabel.members[0].x + (500 * k)) ;
+					}
+					videosLabel.members[j].y = videosLabel.members[0].y + (110 * newIndex);
+					trace(" L(x) -> " + videosLabel.members[j].x + " L(y) -> " + videosLabel.members[j].y);
+				}
+			}
+		}
+
+
 		WeekData.setDirectoryFromWeek(loadedWeeks[0]);
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
 
@@ -146,10 +182,10 @@ class StoryMenuState extends MusicBeatState
 		difficultySelectors = new FlxGroup();
 		add(difficultySelectors);
 
-		leftArrow = new FlxSprite(0, 0);
-		leftArrow.scale.x = (FlxG.width / 2) - (leftArrow.width / 2);
-		leftArrow.scale.y = 100;
-		leftArrow.angle = 45;
+		leftArrow = new FlxSprite(500, 500);
+		leftArrow.scale.x = 1.3;
+		leftArrow.scale.y = 1.3;
+		leftArrow.angle = 90;
 		leftArrow.antialiasing = ClientPrefs.data.antialiasing;
 		leftArrow.frames = ui_tex;
 		leftArrow.animation.addByPrefix('idle', "arrow left");
@@ -170,7 +206,9 @@ class StoryMenuState extends MusicBeatState
 
 		rightArrow = new FlxSprite(leftArrow.x, leftArrow.y + 70);
 		rightArrow.antialiasing = ClientPrefs.data.antialiasing;
-		rightArrow.angle = -45;
+		rightArrow.scale.x = 1.3;
+		rightArrow.scale.y = 1.3;
+		rightArrow.angle = 90;
 		rightArrow.frames = ui_tex;
 		rightArrow.animation.addByPrefix('idle', 'arrow right');
 		rightArrow.animation.addByPrefix('press', "arrow push right", 24, false);
@@ -199,82 +237,78 @@ class StoryMenuState extends MusicBeatState
 		lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 30)));
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-		var keyPressed:Bool = false; // Variable to track if key is pressed
-		var timer:FlxTimer = null; // Timer variable
-		 // Check if the key is pressed
-		if(FlxG.keys.justPressed.ANY && !keyPressed) {
-			keyPressed = true; // Key is pressed
-			// Start a timer
-			timer = new FlxTimer().start(2, function(tmr:FlxTimer):Void {
-			    // Perform action after timer expires
 
-			    camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
-			});
-		}
-
-		if(!FlxG.keys.justPressed.ANY&& keyPressed) {
-			keyPressed = false; // Key is released
-			// Stop the timer
-			timer.cancel();
-		}
 
 		// FlxG.watch.addQuick('font', scoreText.font);
-
+		leftArrow.x = camFollow.x - 50;
+		leftArrow.y = camFollow.y - 150;
+		rightArrow.x = leftArrow.x;
+		rightArrow.y = leftArrow.y + 180;
+		if(curDifficulty == 1){
+			sprDifficulty.x = leftArrow.x - 125;
+		} else {
+			sprDifficulty.x = leftArrow.x - 75;
+		}
+		sprDifficulty.y = leftArrow.y + 100;
+		
+		leftArrow.visible = rightArrow.visible = sprDifficulty.visible = allowedDif;
 		if (!movedBack && !selectedWeek)
 		{
 			var upP = controls.UI_UP_P;
 			var downP = controls.UI_DOWN_P;
-			var allowedDif:Bool = false;
+			
 
 			// < 359.5
 			// > 859.5
-			if (upP)
-			{
-				changeWeek(-1, "vertically");
-				camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
-				
-			}
-
-			if (downP)
-			{
-				changeWeek(1, "vertically");
-				camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
-				
-			}
-			if(FlxG.mouse.wheel > 0)
-			{
-				if(camFollow.y > 359.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y - 350);
+			// my code sucks i know but eh I don't have the energy to care :D
+			if (!allowedDif) {
+				if (upP)
+				{
+					changeWeek(-1, "vertically");
+					camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 450);
+					
 				}
-			}
-			if(FlxG.mouse.wheel < 0) {
-				if(camFollow.y < 859.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y + 350);
+	
+				if (downP)
+				{
+					changeWeek(1, "vertically");
+					camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 450);
+					
 				}
-				
-			}
-			if(allowedDif) {
-				if (controls.UI_RIGHT)
-					rightArrow.animation.play('press')
-				else
-					rightArrow.animation.play('idle');
-	
-				if (controls.UI_LEFT)
-					leftArrow.animation.play('press');
-				else
-					leftArrow.animation.play('idle');
-	
-				if (controls.UI_RIGHT_P)
-					changeDifficulty(1);
-				else if (controls.UI_LEFT_P)
-					changeDifficulty(-1);
-				else if (upP || downP)
-					changeDifficulty();
-			} else {
+				if(FlxG.mouse.wheel > 0)
+				{
+					if(camFollow.y > 500) {
+						camFollow.setPosition(camFollow.x, camFollow.y - 350);
+					}
+				}
+				if(FlxG.mouse.wheel < 0) {
+					if(camFollow.y < 600) {
+						camFollow.setPosition(camFollow.x, camFollow.y + 350);
+					}
+					
+				}
 				if (controls.UI_RIGHT_P)
 					changeWeek(1);
 				else if (controls.UI_LEFT_P)
 					changeWeek(-1);
+			}
+			if(allowedDif) {
+				if (controls.UI_UP)
+					leftArrow.animation.play('press')
+				else
+					leftArrow.animation.play('idle');
+	
+				if (controls.UI_DOWN)
+					rightArrow.animation.play('press');
+				else
+					rightArrow.animation.play('idle');
+	
+				if (controls.UI_UP_P)
+					changeDifficulty(1);
+				else if (controls.UI_DOWN_P)
+					changeDifficulty(-1);
+				else if (upP || downP)
+					changeDifficulty();
 			}
 
 			if(FlxG.keys.justPressed.CONTROL)
@@ -290,9 +324,19 @@ class StoryMenuState extends MusicBeatState
 			}
 			else if (controls.ACCEPT)
 			{
-				selectWeek(curWeek);
+				ct ++;
 			}
+
+			switch (ct) {
+				case 1:
+					allowedDif = true;
+				case 2:
+					ct = 0;
+					selectWeek(curWeek);
+			}
+
 		}
+
 
 		if (controls.BACK && !movedBack && !selectedWeek)
 		{
@@ -464,7 +508,6 @@ class StoryMenuState extends MusicBeatState
 			 */
 
 			curWeek += change + (1 * change);
-			trace(curWeek);
 			if(curWeek >= loadedWeeks.length) {
 				curWeek = 0;
 			}
