@@ -4,7 +4,6 @@ import backend.WeekData;
 import backend.Highscore;
 import backend.Song;
 import flixel.FlxObject;
-
 import flixel.group.FlxGroup;
 import flixel.graphics.FlxGraphic;
 
@@ -81,7 +80,7 @@ class StoryMenuState extends MusicBeatState
 		#end
 
 		var num:Int = 0;
-		var x:Int = -1000;
+		var x:Int = -1100;
 		videos = new FlxTypedGroup<FlxSprite>();
 		add(videos);
 		for (i in 0...WeekData.weeksList.length)
@@ -116,50 +115,23 @@ class StoryMenuState extends MusicBeatState
 			video.scale.x = 0.2;
 			video.scale.y = 0.2;
 			videos.add(video);
+			
 		
 		}
+
 
 		for(i in 0...videos.length) {
 			if(i % 2 == 0 && i != 0) {
 				var newIndex = 0;
 				newIndex = i + 1;
-	
+				// DON'T TOUCH I SWEAR TO GOD !
 				for(j in newIndex - 1...newIndex + 1) {
-					
-
 					/**
-					 *	so I need to hmm huh..
-					 	2 - x = 0 / 1
-						2 - 2 = 0
-						2 - 1 = 1
-						j - 
-					 	j - (j - j)
-						for(k in 0...j) {
-							trace(k);
-							if j == 2
-								0
-								1
-							if j == 3
-								0
-								1
-								2
-						}
-						 
+					 * It looks fanacy right ?
+					 * well took 1:30 hour :D *Help*
 					 */
 
-
-					/**
-					 * if j == 2
-					 * 2 - 1
-					 * huh...
-					 * OMG I hate this *Cries*
-					 * **I hate myself**
-					 * Whoever is reading this have a good day/night/afternoon/
-					 * 
-					 * LEETTS GOOOO 
-					*/
 					for(k in 0...j - 1) {
-						trace(k);
 						videos.members[j].x = (videos.members[0].x + (500 * k)) ;
 					}
 					videos.members[j].y = (videos.members[0].y + 50) * newIndex;
@@ -227,7 +199,25 @@ class StoryMenuState extends MusicBeatState
 		lerpScore = Math.floor(FlxMath.lerp(intendedScore, lerpScore, Math.exp(-elapsed * 30)));
 		if(Math.abs(intendedScore - lerpScore) < 10) lerpScore = intendedScore;
 
-	
+		var keyPressed:Bool = false; // Variable to track if key is pressed
+		var timer:FlxTimer = null; // Timer variable
+		 // Check if the key is pressed
+		if(FlxG.keys.justPressed.ANY && !keyPressed) {
+			keyPressed = true; // Key is pressed
+			// Start a timer
+			timer = new FlxTimer().start(2, function(tmr:FlxTimer):Void {
+			    // Perform action after timer expires
+
+			    camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
+			});
+		}
+
+		if(!FlxG.keys.justPressed.ANY&& keyPressed) {
+			keyPressed = false; // Key is released
+			// Stop the timer
+			timer.cancel();
+		}
+
 		// FlxG.watch.addQuick('font', scoreText.font);
 
 		if (!movedBack && !selectedWeek)
@@ -240,27 +230,26 @@ class StoryMenuState extends MusicBeatState
 			// > 859.5
 			if (upP)
 			{
-				if(camFollow.y > 359.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y - 500);
-				}
+				changeWeek(-1, "vertically");
+				camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
+				
 			}
 
 			if (downP)
 			{
-				if(camFollow.y < 859.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y + 500);
-				}
+				changeWeek(1, "vertically");
+				camFollow.setPosition(camFollow.x, videos.members[curWeek].y + 350);
 				
 			}
 			if(FlxG.mouse.wheel > 0)
 			{
 				if(camFollow.y > 359.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y - 500);
+					camFollow.setPosition(camFollow.x, camFollow.y - 350);
 				}
 			}
 			if(FlxG.mouse.wheel < 0) {
 				if(camFollow.y < 859.5) {
-					camFollow.setPosition(camFollow.x, camFollow.y + 500);
+					camFollow.setPosition(camFollow.x, camFollow.y + 350);
 				}
 				
 			}
@@ -313,7 +302,7 @@ class StoryMenuState extends MusicBeatState
 		}
 
 		super.update(elapsed);
-
+		mouseControls();
 		grpLocks.forEach(function(lock:FlxSprite)
 		{
 			lock.visible = (lock.y > FlxG.height / 2);
@@ -323,19 +312,6 @@ class StoryMenuState extends MusicBeatState
 
 
 	function mouseControls() {
-		if (FlxG.mouse.justMoved)
-			{
-				for (i in 0...videos.length)
-				{
-					if (i != curWeek)
-					{
-						if (FlxG.mouse.overlaps(videos.members[i]) && !FlxG.mouse.overlaps(videos.members[curWeek]))
-						{
-							changeWeekOnMouse(i);
-						}
-					}
-				}
-			}
 
 	}
 
@@ -452,21 +428,61 @@ class StoryMenuState extends MusicBeatState
 			curWeek = loadedWeeks.length - 1;
 	}
 
-	function changeWeek(change:Int = 0):Void
+	function changeWeek(change:Int = 0, mode:String = "default"):Void
 	{
 		FlxTween.tween(videos.members[curWeek],
-		{"scale.x": 0.2, "scale.y": 0.2}, 0.2, {
-			type: FlxTweenType.ONESHOT,
-			ease: FlxEase.cubeOut
-		});
+			{"scale.x": 0.2, "scale.y": 0.2}, 0.2, {
+				type: FlxTweenType.ONESHOT,
+				ease: FlxEase.cubeOut
+			});
+			videos.members[curWeek].shader = null;
+		
 
-		curWeek += change;
-		if (curWeek >= loadedWeeks.length)
-			curWeek = 0;
-			
-		if (curWeek < 0)
-			curWeek = loadedWeeks.length - 1;
+		if(mode == "default") {
+			curWeek += change;
+			if (curWeek >= loadedWeeks.length)
+				curWeek = 0;
+				
+			if (curWeek < 0)
+				curWeek = loadedWeeks.length - 1;
+		}
 
+		else {
+			/**
+			 *  0  1
+			 *  2  3
+			 *  4  5
+				start at 0
+				down is gonna add 2 so
+				curWeek += change (1) + (1 * change)
+				curWeek = 2
+				start at 3
+				curWeek = 2
+				curWeek += 1
+				curWeek = 3
+
+			 */
+
+			curWeek += change + (1 * change);
+			trace(curWeek);
+			if(curWeek >= loadedWeeks.length) {
+				curWeek = 0;
+			}
+			if(curWeek > loadedWeeks.length - 1) {
+				curWeek = 1;
+			}
+
+			if(curWeek < 0) {
+				if(Math.abs(curWeek) % 2 == 0) {
+					curWeek = loadedWeeks.length - 2;
+				} else {
+					curWeek = loadedWeeks.length - 1;
+				}
+			}
+		}
+
+		
+		
 
 
 		var leWeek:WeekData = loadedWeeks[curWeek];
@@ -484,6 +500,7 @@ class StoryMenuState extends MusicBeatState
 			type: FlxTweenType.ONESHOT,
 			ease: FlxEase.cubeOut
 		});
+
 		Difficulty.loadFromWeek();
 		difficultySelectors.visible = unlocked;
 
@@ -500,6 +517,7 @@ class StoryMenuState extends MusicBeatState
 		}
 		updateText();
 	}
+
 
 	function weekIsLocked(name:String):Bool {
 		var leWeek:WeekData = WeekData.weeksLoaded.get(name);

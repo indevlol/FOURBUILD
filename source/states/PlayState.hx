@@ -1457,6 +1457,8 @@ class PlayState extends MusicBeatState
 		eventsPushed.push(event.event);
 	}
 
+	
+
 	// called by every event with the same name
 	function eventPushedUnique(event:EventNote) {
 		switch(event.event) {
@@ -1478,6 +1480,15 @@ class PlayState extends MusicBeatState
 
 			case 'Play Sound':
 				Paths.sound(event.value1); //Precache sound
+			
+			case 'The Power Of Two':
+				//NOT FINISHED SHIIIITT
+				for (note in SONG.notes[ChartingState.curSec].sectionNotes) {
+					if(note.wasGoodHit) {
+						health -= 0.001;
+						trace("HIT!");
+					}
+				}
 		}
 		stagesFunc(function(stage:BaseStage) stage.eventPushedUnique(event));
 	}
