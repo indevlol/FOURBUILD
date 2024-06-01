@@ -2,6 +2,6 @@
 <TextureAtlas imagePath="MENU.png">
 	<!-- Created with Adobe Animate version 21.0.6.41649 -->
 	<!-- http://www.adobe.com/products/animate.html -->
-	<SubTexture name="Symbol 1 instance 10000" x="0" y="0" width="163" height="52"/>
-	<SubTexture name="Symbol 1 instance 10001" x="0" y="52" width="163" height="52"/>
+	<SubTexture name="unSubed0000" x="0" y="0" width="163" height="52"/>
+	<SubTexture name="Subed0001" x="0" y="52" width="163" height="52"/>
 </TextureAtlas>

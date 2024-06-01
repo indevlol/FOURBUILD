@@ -12,6 +12,7 @@ import objects.MenuCharacter;
 
 import substates.GameplayChangersSubstate;
 import substates.ResetScoreSubState;
+import openfl.ui.Mouse;
 
 class StoryMenuState extends MusicBeatState
 {
@@ -46,6 +47,19 @@ class StoryMenuState extends MusicBeatState
 	"                        Vs Two \n               The Power Of Two",
 	"                    Vs Annoucer \n The Mystrious Talking Box Thingie"
 	];
+	var sub:FlxSprite;
+	var canClick:Bool = true;
+	var options:Array<String> = [
+		"Home",
+		"Videos"
+	];
+	var optionsGrp:FlxTypedGroup<FlxSprite>;
+	var videosXPositions:Int = -1100;
+	var optionsXPositions:Int = 120;
+	var curSelected:Int = 0;
+	var isHovering:Bool = false;
+	var inHome:Bool = true;
+	var randomVideo:FlxSprite;
 	override function create()
 	{
 		FlxG.camera.bgColor = FlxColor.fromRGB(15, 15, 15);
@@ -59,6 +73,7 @@ class StoryMenuState extends MusicBeatState
 		persistentUpdate = persistentDraw = true;
 		
 		FlxG.mouse.visible = true;
+		FlxG.mouse.useSystemCursor = true;
 		youtube = new FlxSprite().loadGraphic(Paths.image('menus/story/Youtube'));
 		youtube.antialiasing = ClientPrefs.data.antialiasing;
 		youtube.scale.x = 1.13;
@@ -78,7 +93,6 @@ class StoryMenuState extends MusicBeatState
 
 
 
-
 		grpLocks = new FlxTypedGroup<FlxSprite>();
 		add(grpLocks);
 
@@ -89,12 +103,39 @@ class StoryMenuState extends MusicBeatState
 		#end
 
 		var num:Int = 0;
-		var x:Int = -1100;
+		
 		videos = new FlxTypedGroup<FlxSprite>();
 		add(videos);
 		
 		videosLabel = new FlxTypedGroup<FlxText>();
 		add(videosLabel);
+
+		optionsGrp = new FlxTypedGroup<FlxSprite>();
+		add(optionsGrp);
+
+		sub = new FlxSprite(250, 330);
+		sub.frames = Paths.getSparrowAtlas('menus/story/Subscribe');
+		sub.animation.addByPrefix('unsub', 'unSubed');
+		sub.animation.addByPrefix('sub', 'Subed');
+		sub.animation.play('unsub');
+		sub.scale.x = 0.7;
+		sub.scale.y = 0.7;
+		add(sub);
+
+		for(i in 0...options.length) {
+			optionsXPositions += 130;
+			var option:FlxSprite = new FlxSprite(optionsXPositions, 410);
+			option.scale.x = .7;
+			option.scale.y = .7;
+			option.frames = Paths.getSparrowAtlas('menus/story/' + options[i]);
+			option.animation.addByPrefix('idle', options[i] );
+			option.animation.addByPrefix('selected', 'Selected' + options[i]);
+			option.animation.play('idle');
+			optionsGrp.add(option);
+		}
+
+		optionsGrp.members[0].animation.play('selected');
+
 
 		for (i in 0...WeekData.weeksList.length)
 		{
@@ -123,17 +164,17 @@ class StoryMenuState extends MusicBeatState
 			}
 			
 			trace(weekFile.weekName);
-			x += 500;
-			var video:FlxSprite = new FlxSprite(x, 50).loadGraphic(Paths.image('menus/story/thumbnails/PLACEHOLDER'));
+			videosXPositions += 500;
+			var video:FlxSprite = new FlxSprite(videosXPositions, 50).loadGraphic(Paths.image('menus/story/thumbnails/PLACEHOLDER'));
 			video.scale.x = 0.2;
 			video.scale.y = 0.2;
 			videos.add(video);
+			
 			
 		}
 		var xPos:Int = -1100;
 		for (i in 0...videosLabels.length) {
 			xPos += 500;
-			trace(videosLabels[i]);
 			var videoText:FlxText =  new FlxText(xPos + 780, 710, videos.members[0].width, videosLabels[i], 15);
 			videosLabel.add(videoText);
 		}
@@ -174,7 +215,11 @@ class StoryMenuState extends MusicBeatState
 			}
 		}
 
-
+		randomVideo = new FlxSprite(-300, 50).loadGraphic(Paths.image('menus/story/thumbnails/randomVideo'));
+		randomVideo.scale.x = 0.2;
+		randomVideo.scale.y = 0.2;
+		randomVideo.active = randomVideo.visible = false;
+		add(randomVideo);
 		WeekData.setDirectoryFromWeek(loadedWeeks[0]);
 		var charArray:Array<String> = loadedWeeks[0].weekCharacters;
 
@@ -215,6 +260,7 @@ class StoryMenuState extends MusicBeatState
 		rightArrow.animation.play('idle');
 		difficultySelectors.add(rightArrow);
 
+		leftArrow.alpha = rightArrow.alpha = sprDifficulty.alpha = 0;
 
 		// add(rankText);
 
@@ -225,6 +271,8 @@ class StoryMenuState extends MusicBeatState
 		FlxG.camera.follow(camFollow, null, 9);
 	}
 
+	
+	
 	override function closeSubState() {
 		persistentUpdate = true;
 		changeWeek();
@@ -252,6 +300,17 @@ class StoryMenuState extends MusicBeatState
 		sprDifficulty.y = leftArrow.y + 100;
 		
 		leftArrow.visible = rightArrow.visible = sprDifficulty.visible = allowedDif;
+		
+		switch(options[curSelected]) {
+			case "Home":
+				inHome = true;
+			case "Videos":
+				inHome = false;
+				curWeek = 0;
+				
+		}
+
+
 		if (!movedBack && !selectedWeek)
 		{
 			var upP = controls.UI_UP_P;
@@ -324,38 +383,95 @@ class StoryMenuState extends MusicBeatState
 			}
 			else if (controls.ACCEPT)
 			{
-				ct ++;
+				if(inHome) {
+					ct ++;
+				} else {
+					curDifficulty = 2;
+					selectWeek(FlxG.random.int(1, WeekData.weeksList.length - 1));
+				}
 			}
-
+			
 			switch (ct) {
+				case 0:
+					allowedDif = false;
 				case 1:
 					allowedDif = true;
+					FlxTween.tween(leftArrow, {alpha: 1}, 0.3);
+					FlxTween.tween(rightArrow, {alpha: 1}, 0.3);
+					FlxTween.tween(sprDifficulty, {alpha: 1}, 0.3);
 				case 2:
-					ct = 0;
 					selectWeek(curWeek);
 			}
 
 		}
 
+		for(i in 0...WeekData.weeksList.length) {
+			videos.members[i].visible = videosLabel.members[i].visible = inHome;
+			videos.members[i].active = videosLabel.members[i].active = inHome;
+		}
+		randomVideo.visible = !inHome;
+		randomVideo.active = !inHome;
 
-		if (controls.BACK && !movedBack && !selectedWeek)
+		if (controls.BACK || FlxG.mouse.justPressedRight && !movedBack && !selectedWeek)
 		{
-			FlxG.sound.play(Paths.sound('cancelMenu'));
-			movedBack = true;
-			MusicBeatState.switchState(new MainMenuState());
+			ct --;
+			if(allowedDif) {
+				FlxTween.tween(leftArrow, {alpha: 0}, 0.3);
+				FlxTween.tween(rightArrow, {alpha: 0}, 0.3);
+				FlxTween.tween(sprDifficulty, {alpha: 0}, 0.3);
+			}
+			if(!allowedDif) {
+				FlxG.sound.play(Paths.sound('cancelMenu'));
+				movedBack = true;
+				MusicBeatState.switchState(new MainMenuState());
+			}
 		}
 
-		super.update(elapsed);
+	
+
 		mouseControls();
+		super.update(elapsed);
 		grpLocks.forEach(function(lock:FlxSprite)
 		{
 			lock.visible = (lock.y > FlxG.height / 2);
 		});
 
 	}
+	
 
 
 	function mouseControls() {
+		if(FlxG.mouse.overlaps(sub)) {
+			isHovering = true;
+			if(FlxG.mouse.justPressed) {
+				if(canClick) {
+					CoolUtil.browserLoad('https://www.youtube.com/@BFDI');
+					canClick = false;
+				}
+			}
+			sub.animation.play('sub');
+		} else {
+			isHovering = false;
+			canClick = true;
+			sub.animation.play('unsub');
+		}
+
+		for (i in 0...optionsGrp.length) {
+			if(!weekIsLocked("week1") && !weekIsLocked("week2") && !weekIsLocked("week3")) {
+				var hovering = FlxG.mouse.overlaps(optionsGrp.members[i]);
+				if(hovering) {
+					if(FlxG.mouse.justPressed) {
+						
+						optionsGrp.members[curSelected].animation.play('idle');
+						curSelected = i;
+						optionsGrp.members[curSelected].animation.play('selected');
+					}
+					isHovering = true;
+				} else {
+					isHovering = false;
+				}
+			}
+		}
 
 	}
 
@@ -373,17 +489,17 @@ class StoryMenuState extends MusicBeatState
 			for (i in 0...leWeek.length) {
 				songArray.push(leWeek[i][0]);
 			}
-
+			
 			// Nevermind that's stupid lmao
 			try
 			{
 				PlayState.storyPlaylist = songArray;
 				PlayState.isStoryMode = true;
 				selectedWeek = true;
-	
+				
 				var diffic = Difficulty.getFilePath(curDifficulty);
 				if(diffic == null) diffic = '';
-	
+					
 				PlayState.storyDifficulty = curDifficulty;
 	
 				PlayState.SONG = Song.loadFromJson(PlayState.storyPlaylist[0].toLowerCase() + diffic, PlayState.storyPlaylist[0].toLowerCase());
@@ -393,7 +509,7 @@ class StoryMenuState extends MusicBeatState
 			catch(e:Dynamic)
 			{
 				trace('ERROR! $e');
-				return;
+				
 			}
 			
 			if (stopspamming == false)
@@ -414,7 +530,6 @@ class StoryMenuState extends MusicBeatState
 			DiscordClient.loadModRPC();
 			#end
 		}
-		else FlxG.sound.play(Paths.sound('cancelMenu'));
 	}
 
 	var tweenDifficulty:FlxTween;
@@ -482,48 +597,40 @@ class StoryMenuState extends MusicBeatState
 			videos.members[curWeek].shader = null;
 		
 
-		if(mode == "default") {
-			curWeek += change;
-			if (curWeek >= loadedWeeks.length)
-				curWeek = 0;
-				
-			if (curWeek < 0)
-				curWeek = loadedWeeks.length - 1;
-		}
-
-		else {
-			/**
-			 *  0  1
-			 *  2  3
-			 *  4  5
-				start at 0
-				down is gonna add 2 so
-				curWeek += change (1) + (1 * change)
-				curWeek = 2
-				start at 3
-				curWeek = 2
-				curWeek += 1
-				curWeek = 3
-
-			 */
-
-			curWeek += change + (1 * change);
-			if(curWeek >= loadedWeeks.length) {
-				curWeek = 0;
-			}
-			if(curWeek > loadedWeeks.length - 1) {
-				curWeek = 1;
-			}
-
-			if(curWeek < 0) {
-				if(Math.abs(curWeek) % 2 == 0) {
-					curWeek = loadedWeeks.length - 2;
-				} else {
+		switch (mode) {
+			case "default":
+				curWeek += change;
+				if (curWeek >= loadedWeeks.length)
+					curWeek = 0;
+					
+				if (curWeek < 0)
 					curWeek = loadedWeeks.length - 1;
+			
+			case "vertically":
+				curWeek += change + (1 * change);
+				if(curWeek >= loadedWeeks.length) {
+					curWeek = 0;
 				}
-			}
-		}
+				if(curWeek > loadedWeeks.length - 1) {
+					curWeek = 1;
+				}
 
+				if(curWeek < 0) {
+					if(Math.abs(curWeek) % 2 == 0) {
+						curWeek = loadedWeeks.length - 2;
+					} else {
+						curWeek = loadedWeeks.length - 1;
+					}
+				}
+
+			case "mouse":
+				curWeek = change;
+				if (curWeek >= loadedWeeks.length)
+					curWeek = 0;
+					
+				if (curWeek < 0)
+					curWeek = loadedWeeks.length - 1;
+		}
 		
 		
 
